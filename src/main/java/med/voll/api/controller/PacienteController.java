@@ -12,6 +12,7 @@ public class PacienteController {
 
     @PostMapping
     public void cadastroPaciente(@RequestBody DadosPaciente dadosPaciente){
+
         System.out.println(dadosPaciente);
     }
 }
