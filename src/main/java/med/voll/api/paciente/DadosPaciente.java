@@ -1,11 +1,23 @@
 package med.voll.api.paciente;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 import med.voll.api.endereco.DadosEndereco;
 
 public record DadosPaciente(
+
+        @NotBlank
         String nome,
+
+        @NotBlank
+        @Pattern(regexp = "\\d{11}")
         String cpf,
-        String telfone,
+        @NotBlank
+        String telefone,
+        @NotNull
+        @Valid
         DadosEndereco endereco
 ) {
 }
