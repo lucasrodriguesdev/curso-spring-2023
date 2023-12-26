@@ -22,12 +22,15 @@ public class Paciente {
 
     private String cpf;
 
+    private String email;
+
     private String telefone;
 
     private Endereco endereco;
 
     public Paciente(DadosPaciente dados) {
         this.nome = dados.nome();
+        this.email = dados.email();
         this.cpf = dados.cpf();
         this.telefone = dados.telefone();
         this.endereco = new Endereco(dados.endereco());

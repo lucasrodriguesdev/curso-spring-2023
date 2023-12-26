@@ -16,6 +16,10 @@ public record DadosPaciente(
         String cpf,
         @NotBlank
         String telefone,
+
+        @NotBlank
+        String email,
+
         @NotNull
         @Valid
         DadosEndereco endereco
