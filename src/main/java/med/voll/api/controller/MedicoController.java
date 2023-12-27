@@ -30,7 +30,7 @@ public class MedicoController {
     @Transactional
     public void atualizar(@RequestBody @Valid DadosAtualizaveisMedico dados){
         var medico = repository.getReferenceById(dados.id());
-        medico.atualizarDados(dados);
+        medico.atualizaDadosMedico(dados);
     }
 
     @DeleteMapping("/{id}")
